@@ -1,0 +1,7 @@
+.footer {
+  width: 100vw;
+
+  padding: 20px 40px;
+
+  background-image: radial-gradient(circle, #000000 30%, #161616 100%);
+}
