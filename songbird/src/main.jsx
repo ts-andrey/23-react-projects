@@ -6,15 +6,26 @@ import './index.css';
 
 import Root from './pages/Root';
 import Welcome from './pages/Welcome';
-import Quiz from './pages/Quiz';
+import Quizlet from './pages/Quizlet';
 import Scores from './pages/Scores';
 import NotFound from './pages/NotFound';
+import QuizGreet from './components/quiz/QuizGreet';
+import Quiz from './components/quiz/Quiz';
 
 const router = createBrowserRouter([
   {
     path: '', element: <Root />, children: [
       { path: '', element: <Welcome /> },
-      { path: 'quiz', element: <Quiz /> },
+      {
+        path: 'quiz', element: <Quizlet />, children: [
+          { path: '', element: <QuizGreet />, },
+          { path: 'warmup', element: <Quiz />, },
+          { path: 'passerines', element: <Quiz />, },
+          { path: 'forest-birds', element: <Quiz />, },
+          { path: 'predators', element: <Quiz />, },
+          { path: 'sea-birds', element: <Quiz />, },
+        ]
+      },
       { path: 'scores', element: <Scores /> },
       { path: '*', element: <NotFound /> }
     ]

@@ -5,11 +5,11 @@ a {
 
 .header {
   width: 100vw;
-  background-image: radial-gradient(circle, #410037 50%, #270020 100%);
+  background-image: radial-gradient(circle, #2e0026 50%, #250020 100%);
 }
 
 .nav {
-  padding: 10px 40px 0 40px;
+  padding: 0px 40px;
 }
 
 .nav__list {
@@ -23,23 +23,21 @@ a {
 
 .nav__list a {
   display: inline-block;
+
   padding: 15px 30px;
 
   color: #ffd478;
 
-  border-radius: 3px;
-  border: 1px solid transparent;
+  letter-spacing: 0.25px;
+
+  border-radius: 0px 0px 10px 10px;
 
   transition: all .25s;
-
-  letter-spacing: 0.25px;
 }
 
 .nav__list a:hover,
 .nav__list a.active {
-  cursor: pointer;
-  background-color: #1f0022;
   color: #9ee4e9;
 
-  border: 1px solid #9ee4e9;
+  border-bottom: 3px solid #9ee4e9;
 }

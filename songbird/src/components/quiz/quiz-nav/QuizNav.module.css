@@ -1,0 +1,35 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  position: absolute;
+  top: 50%;
+  left: 3vw;
+
+  transform: translateY(-50%);
+}
+
+
+.list a {
+  margin: 3px 0;
+  padding: 1px 5px;
+  display: inline-block;
+  text-decoration: none;
+
+  color: inherit;
+
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 3px solid transparent;
+
+
+  transition: all .25s;
+}
+
+
+.list a:hover,
+.list a.active {
+  color: #9ee4e9;
+
+  border-bottom: 3px solid #9ee4e9;
+}
