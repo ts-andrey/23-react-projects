@@ -1,6 +1,6 @@
 import classes from './Footer.module.css';
 
-function Footer() {
+export default function Footer() {
   return (
     <footer className={classes.footer}>
       <ul className={classes.list}>
@@ -9,4 +9,3 @@ function Footer() {
     </footer>
   )
 }
-export default Footer;

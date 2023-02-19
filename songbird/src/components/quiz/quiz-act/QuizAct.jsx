@@ -1,9 +1,7 @@
-function QuizAct(){
+export default function QuizAct() {
   return (
     <>
       <p>quiz act</p>
     </>
   )
 }
-
-export default QuizAct;

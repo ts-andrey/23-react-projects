@@ -9,8 +9,6 @@ import Welcome from './pages/Welcome';
 import Quizlet from './pages/Quizlet';
 import Scores from './pages/Scores';
 import NotFound from './pages/NotFound';
-import QuizGreet from './components/quiz/QuizGreet';
-import Quiz from './components/quiz/Quiz';
 
 const router = createBrowserRouter([
   {
@@ -18,12 +16,13 @@ const router = createBrowserRouter([
       { path: '', element: <Welcome /> },
       {
         path: 'quiz', element: <Quizlet />, children: [
-          { path: '', element: <QuizGreet />, },
-          { path: 'warmup', element: <Quiz />, },
-          { path: 'passerines', element: <Quiz />, },
-          { path: 'forest-birds', element: <Quiz />, },
-          { path: 'predators', element: <Quiz />, },
-          { path: 'sea-birds', element: <Quiz />, },
+          { path: '', element: null, },
+          { path: 'warmup', element: null, },
+          { path: 'passerines', element: null, },
+          { path: 'singers', element: null, },
+          { path: 'forest-birds', element: null, },
+          { path: 'predators', element: null, },
+          { path: 'sea-birds', element: null, },
         ]
       },
       { path: 'scores', element: <Scores /> },

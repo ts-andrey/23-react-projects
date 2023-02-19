@@ -1,13 +1,12 @@
-import { Outlet } from 'react-router-dom';
-import QuizNav from '../components/quiz/quiz-nav/QuizNav';
 
 import classes from './Quizlet.module.css';
+
+import Quiz from '../components/quiz/Quiz';
 
 function Quizlet() {
   return (
     <section className={classes.flexbox}>
-      <QuizNav />
-      <Outlet />
+      <Quiz />
     </section>
   )
 }

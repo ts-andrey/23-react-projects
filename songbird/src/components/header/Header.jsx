@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './Header.module.css';
 
-function Header() {
+export default function Header() {
   return (
     <header className={classes.header}>
       <nav className={classes.nav}>
@@ -36,4 +36,3 @@ function Header() {
     </header>
   )
 }
-export default Header;
