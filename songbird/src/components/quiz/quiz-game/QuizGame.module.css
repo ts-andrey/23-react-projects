@@ -15,3 +15,14 @@
   display: flex;
   justify-content: center;
 }
+
+.answer {
+  padding: 8px 24px;
+  margin: 10px 0px;
+
+  background: #7e7e7e5d;
+
+  border-radius: 3px;
+
+  transition: all .25s;
+}

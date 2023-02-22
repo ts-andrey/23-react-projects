@@ -33,4 +33,5 @@ body {
   justify-content: space-between;
   
   color: #deffd1;
+  overflow: hidden;
 }
