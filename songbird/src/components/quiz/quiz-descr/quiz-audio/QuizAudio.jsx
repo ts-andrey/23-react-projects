@@ -2,7 +2,7 @@ function QuizAudio({ birdSoundUrl }) {
   return (
     <>
       <div>
-        <audio src={birdSoundUrl}></audio>
+        <audio controls src={birdSoundUrl}></audio>
       </div>
     </>
   )

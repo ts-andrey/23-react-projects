@@ -1,0 +1,34 @@
+.answer-list {
+  list-style: none;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #24001ebe;
+}
+
+.answer {
+  padding: 8px 24px;
+  margin: 10px 0px;
+
+  background: #7e7e7e5d;
+
+  border-radius: 3px;
+
+  transition: all .25s;
+}
+
+.answer:hover {
+  cursor: pointer;
+  background: #9ee4e9;
+  color: #330000;
+}
+
+.right {
+  background: rgba(9, 255, 0, 0.25);
+  color: rgb(0, 255, 0);
+}
+
+.wrong {
+  background: rgba(255, 0, 0, 0.25);
+  color: red;
+}

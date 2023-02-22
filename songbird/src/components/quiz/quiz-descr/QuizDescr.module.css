@@ -1,0 +1,16 @@
+.description {
+  max-width: 40%;
+  margin-left: 50px;
+
+  display: flex;
+}
+
+.image-wrapper {
+  height: auto;
+  width: 450px;
+}
+
+.image-wrapper img{
+  height: inherit;
+  width: inherit;
+}

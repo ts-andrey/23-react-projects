@@ -1,0 +1,17 @@
+.quiz-wrapper {
+  width: fit-content;
+  margin-left: 20vw;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.data-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}

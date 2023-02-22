@@ -1,20 +1,22 @@
+import classes from './QuizDescr.module.css';
+
 import QuizAudio from './quiz-audio/QuizAudio';
 
-export default function QuizDescr({ isAnswerRight, birdsData }) {
+export default function QuizDescr({ currentBird, isGuessed }) {
 
-  console.log('QuizDescr', { isAnswerRight, birdsData });
+
   return (
-    <>
-      {/* <div>
-        <img src={isAnswerRight ? birdImgUrl : null} alt="bird image" />
+    <div className={classes.description}>
+      <div className={classes['image-wrapper']}>
+        <img src={isGuessed ? currentBird.image : null} alt="bird image" />
       </div>
       <div>
         <div>
-          <h2>{isAnswerRight ? '???' : birdName}</h2>
-          <QuizAudio birdSoundUrl={birdSoundUrl} />
+          <h2>{isGuessed ? currentBird.name : '???'}</h2>
+          <QuizAudio birdSoundUrl={currentBird.audio} />
         </div>
-        <p>{isAnswerRight ? birdDescription : null}</p>
-      </div> */}
-    </>
+        <p>{isGuessed ? currentBird.description : null}</p>
+      </div>
+    </div>
   )
 }
