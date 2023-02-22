@@ -1,16 +1,34 @@
 .description {
-  max-width: 40%;
-  margin-left: 50px;
-
   display: flex;
 }
 
 .image-wrapper {
+  max-width: 50vw;
+  max-height: 50vh;
+  width: auto;
   height: auto;
-  width: 450px;
 }
 
-.image-wrapper img{
-  height: inherit;
+.image-wrapper img {
+  max-height: inherit;
+  max-width: inherit;
   width: inherit;
+  height: inherit;
+}
+
+.bird-data__wrapper {
+  margin-left: 40px;
+  display: grid;
+  justify-items: start;
+
+  text-align: left;
+}
+
+.bird-data{
+  margin-right: 10px;
+
+  font-size: 110%;
+  font-style: italic;
+  letter-spacing: .4px;
+  color: #ffd478;
 }

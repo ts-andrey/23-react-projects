@@ -2,13 +2,16 @@ import { NavLink } from 'react-router-dom';
 
 import classes from './QuizNav.module.css'
 
-export default function QuizNav({ setCurrentQuestion, setScores }) {
+export default function QuizNav({ setCurrentQuestion, setScores, selectedAnswers, setSelectedAnsers, setIsGuessed }) {
 
   const setActiveClass = ({ isActive }) => isActive ? classes.active : undefined;
 
   const clickLinkHandler = () => {
     setCurrentQuestion(0);
     setScores(0);
+    setIsGuessed(false);
+    selectedAnswers.forEach(el => el.className = classes.answer);
+    setSelectedAnsers([]);
   }
 
   return (

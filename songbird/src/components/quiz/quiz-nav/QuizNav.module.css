@@ -17,7 +17,7 @@
   display: inline-block;
   text-decoration: none;
 
-  color: inherit;
+  color: #ffd478;
 
   border-radius: 0px 0px 10px 10px;
   border-bottom: 3px solid transparent;
@@ -33,4 +33,21 @@
   color: #9ee4e9;
 
   border-bottom: 3px solid #9ee4e9;
+}
+
+.answer {
+  padding: 8px 24px;
+  margin: 10px 10px;
+
+  background: #7e7e7e5d;
+
+  border-radius: 3px;
+
+  transition: all .25s;
+}
+
+.answer:hover {
+  cursor: pointer;
+  background: #9ee4e9;
+  color: #330000;
 }

@@ -2,20 +2,33 @@ import classes from './QuizDescr.module.css';
 
 import QuizAudio from './quiz-audio/QuizAudio';
 
+import img from '../../../assets/bird_default.webp';
+
 export default function QuizDescr({ currentBird, isGuessed }) {
 
+  console.log(currentBird);
+
+  let description = <h2>Name: ???</h2>;
+  if (isGuessed) {
+    description = (
+      <>
+        <h2><span className={classes['bird-data']}>Name:</span>{currentBird.name}</h2>
+        <h3><span className={classes['bird-data']}>Species:</span>{currentBird.species}</h3>
+        <p><span className={classes['bird-data']}>Description:</span>{currentBird.description}</p>
+      </>
+    )
+  }
 
   return (
     <div className={classes.description}>
       <div className={classes['image-wrapper']}>
-        <img src={isGuessed ? currentBird.image : null} alt="bird image" />
+        <img src={isGuessed ? currentBird.image : img} alt="bird image" />
       </div>
-      <div>
+      <div className={classes['bird-data__wrapper']}>
         <div>
-          <h2>{isGuessed ? currentBird.name : '???'}</h2>
           <QuizAudio birdSoundUrl={currentBird.audio} />
+          {description}
         </div>
-        <p>{isGuessed ? currentBird.description : null}</p>
       </div>
     </div>
   )

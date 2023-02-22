@@ -2,13 +2,17 @@
   list-style: none;
 
   padding: 10px 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
   border-radius: 5px;
   background: #24001ebe;
 }
 
 .answer {
   padding: 8px 24px;
-  margin: 10px 0px;
+  margin: 10px 10px;
 
   background: #7e7e7e5d;
 

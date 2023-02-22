@@ -26,6 +26,9 @@ export default function Quiz() {
   const [questionData, setQuestionData] = useState({ random: [], correct: '', position: 0 });
   const [scores, setScores] = useState(0);
 
+  const [selectedAnswers, setSelectedAnsers] = useState([]);
+  const [isGuessed, setIsGuessed] = useState(false);
+
 
   useEffect(() => {
     Number.isInteger(dataOrder) ? setIsPlaying(true) : setIsPlaying(false);
@@ -39,12 +42,17 @@ export default function Quiz() {
     <>
       <QuizNav
         startGameSwitcher={setIsPlaying}
-        setCurrentQuestion={setCurrentQuestion} setScores={setScores} />
+        setCurrentQuestion={setCurrentQuestion} setScores={setScores}
+        setSelectedAnsers={setSelectedAnsers} selectedAnswers={selectedAnswers}
+        setIsGuessed={setIsGuessed}
+      />
       {isPlaying ?
         <QuizGame
           questionData={questionData}
           currentBird={currentBird}
           setCurrentQuestion={setCurrentQuestion}
+          selectedAnswers={selectedAnswers} setSelectedAnsers={setSelectedAnsers}
+          isGuessed={isGuessed} setIsGuessed={setIsGuessed}
         /> :
         <QuizGreet />}
     </>
