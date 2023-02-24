@@ -1,4 +1,7 @@
-import classes from './QuizAct.module.css'
+import classes from './QuizAct.module.css';
+
+import correctSound from './../../../assets/correct.webm';
+import wrongSound from './../../../assets/wrong.webm';
 
 const isAnswerRight = (answerNumber, rightAnswerNumber) => Number(answerNumber) === Number(rightAnswerNumber)
 
@@ -6,9 +9,9 @@ const setAnswerClass = (isAnswerRight) => {
   return isAnswerRight ? `${classes.answer} ${classes.right}` : `${classes.answer} ${classes.wrong}`;
 }
 
-
 const playAnswerSound = (isAnswerRight) => {
-  return isAnswerRight ? `play right` : `play wrong`;
+  const answerSound = new Audio(isAnswerRight ? correctSound : wrongSound);
+  answerSound.play();
 }
 
 export default function QuizAct({ questionData, isGuessed, setIsGuessed, currentBird, setSelectedAnsers }) {
