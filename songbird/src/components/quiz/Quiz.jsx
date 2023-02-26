@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { getRandomAnswers } from '../../util/getRandomAnswers';
-import { BIRDS_ROUTE_DATAORDER, GAME_MODES } from '../../util/constants';
+import { BIRDS_TYPES, GAME_MODES } from '../../util/constants';
 
 import BirdsData from './../../data/birdsData';
 
@@ -10,12 +10,14 @@ import QuizNav from './quiz-nav/QuizNav';
 import QuizGame from './quiz-game/QuizGame';
 import QuizGreet from './quiz-greet/QuizGreet';
 
-
+// TO DELETE
 const BIRDS_NAMES = BirdsData.map(el => el.map(el => el.name)).flat();
+// TO DELETE
 
 export default function Quiz() {
   const location = useLocation().pathname;
-  const dataOrder = BIRDS_ROUTE_DATAORDER[location];
+  
+  const dataOrder = BIRDS_TYPES[location];
   const birds = BirdsData[dataOrder] || [];
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -35,7 +37,7 @@ export default function Quiz() {
     setBirdsData(birds);
     setCurrentBird(birds[currentQuestion])
     const [randomAnswers, rightAnswerNumber, rightAnswer] = getRandomAnswers(BIRDS_NAMES, currentBird?.name, difficalty);
-    setQuestionData({ random: randomAnswers, correct: rightAnswer, position: rightAnswerNumber })
+    setQuestionData({ random: randomAnswers, correct: rightAnswer, position: rightAnswerNumber });
   }, [location, currentQuestion, birdsData, currentBird]);
 
   return (
