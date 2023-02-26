@@ -25,7 +25,17 @@ const router = createBrowserRouter([
           { path: 'sea-birds', element: null, },
         ]
       },
-      { path: 'scores', element: <Scores /> },
+      {
+        path: 'scores', element: <Scores />, children: [
+          { path: '', element: null, },
+          { path: 'warmup', element: null, },
+          { path: 'passerines', element: null, },
+          { path: 'singers', element: null, },
+          { path: 'forest-birds', element: null, },
+          { path: 'predators', element: null, },
+          { path: 'sea-birds', element: null, },
+        ]
+      },
       { path: '*', element: <NotFound /> }
     ]
   },
