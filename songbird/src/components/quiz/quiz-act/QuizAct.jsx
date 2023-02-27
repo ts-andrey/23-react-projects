@@ -1,3 +1,5 @@
+import { useStore } from '../../../hook-store/store';
+
 import classes from './QuizAct.module.css';
 
 import correctSound from './../../../assets/correct.webm';
@@ -14,29 +16,32 @@ const playAnswerSound = (isAnswerRight) => {
   answerSound.play();
 }
 
-export default function QuizAct({ questionData, isGuessed, setIsGuessed, currentBird, setSelectedAnsers }) {
-  const { random, correct, position } = questionData;
+export default function QuizAct() {
+  const [globalState, dispatchAction] = useStore();
+
+  const { isGuessed, questionData } = globalState;
+
+  const { randomAnswers, correctAnswerNumber } = questionData;
 
   function answerHandler(event) {
     const el = event.target;
     if (!isGuessed) {
-      const isCorrect = isAnswerRight(el.id, position);
+      dispatchAction('ADD_SELECTED_ANSWER', el);
 
-      setSelectedAnsers((prevElements) => [...prevElements, el]);
+      const isCorrect = isAnswerRight(el.id, correctAnswerNumber);
       el.className = setAnswerClass(isCorrect);
       playAnswerSound(isCorrect);
 
       if (isCorrect) {
-        setIsGuessed(true);
+        dispatchAction('GUESED_RIGHT');
       }
     }
-
   }
 
   return (
     <>
       <ul className={classes['answer-list']} >
-        {random.map((el, index) => <li
+        {randomAnswers.map((el, index) => <li
           key={index}
           id={index}
           className={classes.answer}

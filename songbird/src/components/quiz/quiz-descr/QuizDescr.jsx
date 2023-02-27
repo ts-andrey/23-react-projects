@@ -1,12 +1,13 @@
+import { useStore } from '../../../hook-store/store';
+
 import classes from './QuizDescr.module.css';
 
 import QuizAudio from './quiz-audio/QuizAudio';
-
 import img from '../../../assets/bird_default.webp';
 
-export default function QuizDescr({ currentBird, isGuessed }) {
-
-  console.log(currentBird);
+export default function QuizDescr() {
+  const globalState = useStore()[0];
+  const { currentBird, isGuessed } = globalState;
 
   let description = <h2>Name: ???</h2>;
   if (isGuessed) {

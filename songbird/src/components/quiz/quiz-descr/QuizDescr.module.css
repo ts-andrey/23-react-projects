@@ -3,21 +3,30 @@
 }
 
 .image-wrapper {
-  max-width: 50vw;
-  max-height: 50vh;
-  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  
   height: auto;
+  max-height: 50vh;
+  min-height: 25vh;
+  
+  width: auto;
+  max-width: 25vw;
+  min-width: 25vw;
 }
 
 .image-wrapper img {
-  max-height: inherit;
-  max-width: inherit;
-  width: inherit;
   height: inherit;
+  max-height: inherit;
+  min-height:inherit;
+
+  width: inherit;
+  max-width: inherit;
+  /* min-width: inherit; */
 }
 
 .bird-data__wrapper {
-  margin-left: 40px;
+  margin-left: 50px;
   display: grid;
   justify-items: start;
 

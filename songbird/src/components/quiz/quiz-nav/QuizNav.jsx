@@ -1,17 +1,23 @@
 import { NavLink } from 'react-router-dom';
+import { useStore } from '../../../hook-store/store';
 
 import classes from './QuizNav.module.css'
 
-export default function QuizNav({ setCurrentQuestion, setScores, selectedAnswers, setSelectedAnsers, setIsGuessed }) {
+export default function QuizNav() {
+  const dispatchAction = useStore()[1];
 
   const setActiveClass = ({ isActive }) => isActive ? classes.active : undefined;
 
   const clickLinkHandler = () => {
-    setCurrentQuestion(0);
-    setScores(0);
-    setIsGuessed(false);
-    selectedAnswers.forEach(el => el.className = classes.answer);
-    setSelectedAnsers([]);
+    dispatchAction('RESET_QUEST_PROGRESS');
+
+    dispatchAction('RESET_SCORES');
+
+    dispatchAction('GUESED_WRONG');
+
+    dispatchAction('RESET_SELECTED_ANSWERS_STYLES');
+
+    dispatchAction('CLEAR_SELECTED_ANSWERS');
   }
 
   return (

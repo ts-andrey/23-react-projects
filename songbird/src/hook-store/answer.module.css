@@ -1,0 +1,16 @@
+.answer {
+  padding: 8px 24px;
+  margin: 10px 10px;
+
+  background: #7e7e7e5d;
+
+  border-radius: 3px;
+
+  transition: all .25s;
+}
+
+.answer:hover {
+  cursor: pointer;
+  background: #9ee4e9;
+  color: #330000;
+}

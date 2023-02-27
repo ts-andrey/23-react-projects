@@ -1,62 +1,34 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-
-import { getRandomAnswers } from '../../util/getRandomAnswers';
-import { BIRDS_TYPES, GAME_MODES } from '../../util/constants';
-
-import BirdsData from './../../data/birdsData';
+import { useStore } from '../../hook-store/store';
 
 import QuizNav from './quiz-nav/QuizNav';
 import QuizGame from './quiz-game/QuizGame';
 import QuizGreet from './quiz-greet/QuizGreet';
 
-// TO DELETE
-const BIRDS_NAMES = BirdsData.map(el => el.map(el => el.name)).flat();
-// TO DELETE
+import { BIRDS_TYPES } from '../../util/constants';
 
 export default function Quiz() {
+  const [globalState, dispatchAction] = useStore();
   const location = useLocation().pathname;
   
-  const dataOrder = BIRDS_TYPES[location];
-  const birds = BirdsData[dataOrder] || [];
+  const { questionNumber } = globalState;
 
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [birdsData, setBirdsData] = useState(birds);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [currentBird, setCurrentBird] = useState(birds[currentQuestion]);
-  const [difficalty, setDifficalty] = useState(GAME_MODES['easy']);
-  const [questionData, setQuestionData] = useState({ random: [], correct: '', position: 0 });
-  const [scores, setScores] = useState(0);
-
-  const [selectedAnswers, setSelectedAnsers] = useState([]);
-  const [isGuessed, setIsGuessed] = useState(false);
-
+  const birdsType = location.replace('/quiz/', '');
 
   useEffect(() => {
-    Number.isInteger(dataOrder) ? setIsPlaying(true) : setIsPlaying(false);
-    setBirdsData(birds);
-    setCurrentBird(birds[currentQuestion])
-    const [randomAnswers, rightAnswerNumber, rightAnswer] = getRandomAnswers(BIRDS_NAMES, currentBird?.name, difficalty);
-    setQuestionData({ random: randomAnswers, correct: rightAnswer, position: rightAnswerNumber });
-  }, [location, currentQuestion, birdsData, currentBird]);
+    const dataOrder = BIRDS_TYPES[birdsType];
+    Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('GAME_END');
+
+    dispatchAction('UPDATE_DATA', birdsType);
+
+    dispatchAction('UPDATE_QUESTION_DATA');
+  }, [location, questionNumber]);
 
   return (
     <>
-      <QuizNav
-        startGameSwitcher={setIsPlaying}
-        setCurrentQuestion={setCurrentQuestion} setScores={setScores}
-        setSelectedAnsers={setSelectedAnsers} selectedAnswers={selectedAnswers}
-        setIsGuessed={setIsGuessed}
-      />
-      {isPlaying ?
-        <QuizGame
-          questionData={questionData}
-          currentBird={currentBird}
-          setCurrentQuestion={setCurrentQuestion}
-          selectedAnswers={selectedAnswers} setSelectedAnsers={setSelectedAnsers}
-          isGuessed={isGuessed} setIsGuessed={setIsGuessed}
-        /> :
-        <QuizGreet />}
+      <QuizNav />
+      {globalState.isPlaying ? <QuizGame /> : <QuizGreet />}
     </>
   )
 };
