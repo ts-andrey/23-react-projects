@@ -11,24 +11,25 @@ import { BIRDS_TYPES } from '../../util/constants';
 export default function Quiz() {
   const [globalState, dispatchAction] = useStore();
   const location = useLocation().pathname;
-  
-  const { questionNumber } = globalState;
+
+  const { isPlaying, questionNumber } = globalState;
 
   const birdsType = location.replace('/quiz/', '');
 
   useEffect(() => {
     const dataOrder = BIRDS_TYPES[birdsType];
-    Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('GAME_END');
+    Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('RESET_GAME');
 
     dispatchAction('UPDATE_DATA', birdsType);
 
     dispatchAction('UPDATE_QUESTION_DATA');
+    dispatchAction('RESET_SCORES');
   }, [location, questionNumber]);
 
   return (
     <>
       <QuizNav />
-      {globalState.isPlaying ? <QuizGame /> : <QuizGreet />}
+      {isPlaying ? <QuizGame /> : <QuizGreet />}
     </>
   )
 };

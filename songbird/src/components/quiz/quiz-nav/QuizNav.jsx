@@ -9,14 +9,11 @@ export default function QuizNav() {
   const setActiveClass = ({ isActive }) => isActive ? classes.active : undefined;
 
   const clickLinkHandler = () => {
-    dispatchAction('RESET_QUEST_PROGRESS');
-
     dispatchAction('RESET_SCORES');
-
-    dispatchAction('GUESED_WRONG');
-
+    dispatchAction('RESET_QUEST_PROGRESS');
+    dispatchAction('RESET_SEQUENCE');
+    dispatchAction('RESET_GUESED');
     dispatchAction('RESET_SELECTED_ANSWERS_STYLES');
-
     dispatchAction('CLEAR_SELECTED_ANSWERS');
   }
 

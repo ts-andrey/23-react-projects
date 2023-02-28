@@ -19,7 +19,7 @@ const playAnswerSound = (isAnswerRight) => {
 export default function QuizAct() {
   const [globalState, dispatchAction] = useStore();
 
-  const { isGuessed, questionData } = globalState;
+  const { isGuessed, questionData, questionNumber } = globalState;
 
   const { randomAnswers, correctAnswerNumber } = questionData;
 
@@ -34,6 +34,9 @@ export default function QuizAct() {
 
       if (isCorrect) {
         dispatchAction('GUESED_RIGHT');
+        if (questionNumber == 5) {
+          dispatchAction('SEQUENCE_SUCCESS');
+        }
       }
     }
   }

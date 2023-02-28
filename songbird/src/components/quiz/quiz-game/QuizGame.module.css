@@ -17,7 +17,10 @@
   justify-content: flex-start;
 }
 
-.button-wrapper button {
+.button {
+  position: relative;
+  z-index: 10;
+
   padding: 16px 50px;
   border-radius: 5px;
 
@@ -32,9 +35,21 @@
   transition: all .25s;
 }
 
-.button-wrapper button:hover{
+.button:hover {
   cursor: pointer;
-
   background: #9ee4e9;
   color: #330000;
+}
+
+.button__disabled,
+.button__disabled:hover {
+  user-select: none;
+  cursor: not-allowed;
+  background: #ffd47842;
+  color: #000000b0;
+}
+
+
+.margin-left {
+  margin-left: 50px;
 }
