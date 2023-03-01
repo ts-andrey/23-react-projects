@@ -4,6 +4,7 @@ import classes from './QuizGame.module.css';
 
 import QuizAct from '../quiz-act/QuizAct';
 import QuizDescr from '../quiz-descr/QuizDescr';
+import GameModal from './game-modal/GameModal';
 
 export default function QuizGame() {
   const [globalState, dispatchAction] = useStore();
@@ -17,16 +18,12 @@ export default function QuizGame() {
   }
   function nextRoundHandler() {
     if (questionNumber < 5 && isGuessed) {
+      dispatchAction('GUARD_SCORES');
       resetGameState();
     }
   }
 
-  function nextSectionHandler() {
-    if (isSequenceCleared) {
-      resetGameState();
-      dispatchAction('RESET_SEQUENCE');
-    }
-  }
+
 
   return (
     <>
@@ -37,29 +34,15 @@ export default function QuizGame() {
         </div>
         <div className={classes['button-wrapper']} >
           <button
-            className={isGuessed && !isSequenceCleared
-              ? classes.button
-              : `${classes.button} ${classes['button__disabled']}`}
+            className={`${classes.button} ` + (isGuessed && !isSequenceCleared
+              ? ''
+              : classes['button__disabled'])}
             onClick={nextRoundHandler}
           >
             Next Question
           </button>
-          <button
-            className={(isSequenceCleared
-              ? classes.button
-              : `${classes.button} ${classes['button__disabled']}`) + ` ${classes['margin-left']}`}
-            onClick={nextSectionHandler}
-          >
-            Next Section
-          </button>
-          <button
-            className={(isSequenceCleared
-              ? classes.button
-              : `${classes.button} ${classes['button__disabled']}`) + ` ${classes['margin-left']}`}
-            onClick={nextSectionHandler}
-          >
-            Finish
-          </button>
+          {isSequenceCleared ? <GameModal resetGameState={resetGameState} /> : null}
+          {/* {true ? <GameModal resetGameState={resetGameState} /> : null} */}
         </div>
       </div>
     </>

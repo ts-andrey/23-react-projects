@@ -4,6 +4,7 @@ a {
 }
 
 .header {
+  position: relative;
   width: 100vw;
   background-image: radial-gradient(circle, #2e0026 50%, #250020 100%);
 }
@@ -40,4 +41,12 @@ a {
   color: #9ee4e9;
 
   border-bottom: 3px solid #9ee4e9;
+}
+
+.score__wrapper {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+
+  transform: translateY(-50%);
 }

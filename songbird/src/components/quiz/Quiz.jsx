@@ -12,7 +12,7 @@ export default function Quiz() {
   const [globalState, dispatchAction] = useStore();
   const location = useLocation().pathname;
 
-  const { isPlaying, questionNumber } = globalState;
+  const { isPlaying, questionNumber, isScoresGuarded } = globalState;
 
   const birdsType = location.replace('/quiz/', '');
 
@@ -21,9 +21,11 @@ export default function Quiz() {
     Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('RESET_GAME');
 
     dispatchAction('UPDATE_DATA', birdsType);
-
+    if (!isScoresGuarded) {
+      dispatchAction('RESET_SCORES');
+    }
+    dispatchAction('UNGUARD_SCORES')
     dispatchAction('UPDATE_QUESTION_DATA');
-    dispatchAction('RESET_SCORES');
   }, [location, questionNumber]);
 
   return (
