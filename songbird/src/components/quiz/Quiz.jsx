@@ -14,18 +14,18 @@ export default function Quiz() {
 
   const { isPlaying, questionNumber, isScoresGuarded } = globalState;
 
-  const birdsType = location.replace('/quiz/', '');
-
   useEffect(() => {
-    const dataOrder = BIRDS_TYPES[birdsType];
+    const dataOrder = BIRDS_TYPES[location];
     Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('RESET_GAME');
 
-    dispatchAction('UPDATE_DATA', birdsType);
+    dispatchAction('UPDATE_DATA', location);
     if (!isScoresGuarded) {
       dispatchAction('RESET_SCORES');
+      dispatchAction('HIDE_SCORE_MODAL');
     }
     dispatchAction('UNGUARD_SCORES')
     dispatchAction('UPDATE_QUESTION_DATA');
+    dispatchAction('UPDATE_CURRENT_ROUTE', location);
   }, [location, questionNumber]);
 
   return (

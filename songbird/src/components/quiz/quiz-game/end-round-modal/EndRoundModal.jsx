@@ -1,35 +1,34 @@
 import { useNavigate } from 'react-router-dom';
-
-import classes from './GameModal.module.css';
-
 import { useStore } from '../../../../hook-store/store';
 
-export default function GameModal({ resetGameState }) {
+import classes from './EndRoundModal.module.css';
+import ScoreModal from './score-modal/ScoreModal';
+
+export default function EndRoundModal({ resetGameState }) {
   const [globalState, dispatchAction] = useStore();
   const navigate = useNavigate();
 
-  const { isSequenceCleared } = globalState;
-
+  const { isSequenceCleared, nextRoute, remainRoutes, isContentAvailable, isScoreModalShown } = globalState;
 
   function nextSectionHandler() {
-    if (isSequenceCleared) {
+
+    if (isSequenceCleared && remainRoutes.length > 0 && isContentAvailable) {
       dispatchAction('GUARD_SCORES');
       resetGameState();
       dispatchAction('RESET_SEQUENCE');
       dispatchAction('RESET_QUEST_PROGRESS');
 
       dispatchAction('GUARD_SCORES');
-      navigate('/quiz/singers');
+
+      navigate(nextRoute);
     }
   }
 
   function endGameHandler() {
-    if (isSequenceCleared) {
-      dispatchAction('GUARD_SCORES');
-      resetGameState();
-      dispatchAction('RESET_SEQUENCE');
-      dispatchAction('RESET_QUEST_PROGRESS');
-    }
+    console.log('intro', { isSequenceCleared, isScoreModalShown });
+    dispatchAction('SHOW_SCORE_MODAL');
+
+    console.log('before', { isSequenceCleared, isScoreModalShown });
   }
 
   return (
@@ -53,6 +52,7 @@ export default function GameModal({ resetGameState }) {
         </div>
       </div>
       <div className={classes['modal__overlay']}></div>
+      {isScoreModalShown && <ScoreModal resetGameState={resetGameState} />}
     </>
   )
 }

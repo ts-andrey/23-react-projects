@@ -1,3 +1,69 @@
-.scores{
+.scores__wrapper {
+  max-height: 90%;
+  overflow-y: auto;
   
+  margin-left: 50vw;
+  transform: translateX(-50%);
+}
+
+.scores {
+  position: relative;
+  padding: 5px 10px;
+
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.scores th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04b964;
+  color: white;
+
+  position: sticky;
+  top: 0;
+}
+
+.scores td,
+.scores th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.scores tr:nth-child(even) {
+  background-color: #dbb768;
+  color: #000000;
+}
+
+.scores tr:nth-child(odd) {
+  background-color: #00000070;
+}
+
+.scores tr:hover {
+  background-color: #04a4b9;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #04a4b9;
+  border-radius: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dbb768;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffd755;
 }

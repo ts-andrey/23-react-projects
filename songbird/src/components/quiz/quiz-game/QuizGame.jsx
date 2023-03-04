@@ -4,7 +4,7 @@ import classes from './QuizGame.module.css';
 
 import QuizAct from '../quiz-act/QuizAct';
 import QuizDescr from '../quiz-descr/QuizDescr';
-import GameModal from './game-modal/GameModal';
+import EndRoundModal from './end-round-modal/EndRoundModal';
 
 export default function QuizGame() {
   const [globalState, dispatchAction] = useStore();
@@ -23,8 +23,6 @@ export default function QuizGame() {
     }
   }
 
-
-
   return (
     <>
       <div className={classes['quiz-wrapper']}>
@@ -41,8 +39,7 @@ export default function QuizGame() {
           >
             Next Question
           </button>
-          {isSequenceCleared ? <GameModal resetGameState={resetGameState} /> : null}
-          {/* {true ? <GameModal resetGameState={resetGameState} /> : null} */}
+          {isSequenceCleared ? <EndRoundModal resetGameState={resetGameState} /> : null}
         </div>
       </div>
     </>

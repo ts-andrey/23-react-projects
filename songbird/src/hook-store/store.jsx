@@ -14,8 +14,6 @@ export const useStore = () => {
     for (const listener of listeners) {
       listener(globalState);
     }
-
-    // console.log({ globalState });
   }
 
   useEffect(() => {

@@ -38,6 +38,8 @@ export default function QuizAct() {
 
         if (questionNumber == 5) {
           dispatchAction('SEQUENCE_SUCCESS');
+          dispatchAction('UPDATE_ROUTES');
+          dispatchAction('CHECK_CONTENT_ABAILABLE');
         }
       }
     }
