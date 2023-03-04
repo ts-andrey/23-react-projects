@@ -5,13 +5,24 @@ import classes from './Header.module.css';
 import { useStore } from '../../hook-store/store';
 
 export default function Header() {
-  const globalState = useStore()[0];
+  const [globalState, dispatchAction] = useStore();
   const { scores } = globalState;
 
   const activeClassHandler = ({ isActive }) => isActive ? classes.active : undefined;
 
+  function changeLangHandler(event) {
+    const language = event.target.innerText;
+    dispatchAction('UPDATE_APP_LANG', language);
+  }
+
   return (
     <header className={classes.header}>
+      <div className={classes['lang__wrapper']}>
+        <span className={classes['lang__descr']}>Language:</span>
+        <span className={classes['lang']} onClick={changeLangHandler}>ru</span>
+        <span className={classes['lang__margin']}>|</span>
+        <span className={classes['lang']} onClick={changeLangHandler}>eng</span>
+      </div>
       <nav className={classes.nav}>
         <ul className={classes['nav__list']}>
           <li>

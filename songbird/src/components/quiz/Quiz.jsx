@@ -15,6 +15,7 @@ export default function Quiz() {
   const { isPlaying, questionNumber, isScoresGuarded } = globalState;
 
   useEffect(() => {
+    
     const dataOrder = BIRDS_TYPES[location];
     Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('RESET_GAME');
 
