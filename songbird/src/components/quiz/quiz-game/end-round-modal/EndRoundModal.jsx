@@ -4,11 +4,13 @@ import { useStore } from '../../../../hook-store/store';
 import classes from './EndRoundModal.module.css';
 import ScoreModal from './score-modal/ScoreModal';
 
+import { endRoundHeaderText, endRoundSubheaderText, btnContinueText, btnStopText } from './EndRoundModal.langData';
+
 export default function EndRoundModal({ resetGameState }) {
   const [globalState, dispatchAction] = useStore();
   const navigate = useNavigate();
 
-  const { isSequenceCleared, nextRoute, remainRoutes, isContentAvailable, isScoreModalShown } = globalState;
+  const { isSequenceCleared, nextRoute, remainRoutes, isContentAvailable, isScoreModalShown, appLanguage } = globalState;
 
   function nextSectionHandler() {
 
@@ -34,20 +36,20 @@ export default function EndRoundModal({ resetGameState }) {
   return (
     <>
       <div className={classes.modal}>
-        <h2>Congratulations! You finished this section of questions!</h2>
-        <h3>Please consider your next options. Would you like to continue playing (untill the next 'savepoint') or finish the game?</h3>
+        <h2>{endRoundHeaderText[appLanguage]}</h2>
+        <h3>{endRoundSubheaderText[appLanguage]}</h3>
         <div className={classes['button-wrapper']}>
           <button
             className={`${classes.button} ${classes['margin-left']} `}
             onClick={nextSectionHandler}
           >
-            Continue
+            {btnContinueText[appLanguage]}
           </button>
           <button
             className={`${classes.button} ${classes['margin-left']}`}
             onClick={endGameHandler}
           >
-            Finish
+            {btnStopText[appLanguage]}
           </button>
         </div>
       </div>

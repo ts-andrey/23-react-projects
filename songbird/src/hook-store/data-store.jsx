@@ -18,8 +18,22 @@ export const configureDataStore = () => {
       return ({ birdsData: data, currentBird: data[state.questionNumber] })
     },
     UPDATE_CURRENT_BIRD: (state) => ({ currentBird: state.birdsData[state.questionNumber] }),
-    UPDATE_BIRDS_NAMES: (state) => ({ allBirdsNames: state.birdsData.map(el => el.map(el => el.name)).flat() }),
-    UPDATE_APP_LANG: (state, lang) => ({ appLanguage: lang, allBirdsData: birdsLangData[lang] }),
+    UPDATE_BIRDS_NAMES: (state) => ({ allBirdsNames: state.allBirdsData.map(birdsType => birdsType.map(bird => bird.name)).flat() }),
+    UPDATE_APP_DATA_LANG: (state, payload) => {
+      const { lang, route } = payload;
+      const currLangData = birdsLangData[lang];
+      const newBirdsData = currLangData[BIRDS_TYPES[route]] || [];
+      const newCurrBird = newBirdsData[state.questionNumber];
+      const newAllBirdNames = currLangData.map(birdsType => birdsType.map(bird => bird.name)).flat();
+
+      return ({
+        appLanguage: lang,
+        allBirdsData: currLangData,
+        birdsData: newBirdsData,
+        currBird: newCurrBird,
+        allBirdsNames: newAllBirdNames,
+      })
+    },
   }
 
   initStore(actions, {
@@ -27,6 +41,6 @@ export const configureDataStore = () => {
     currentBird: undefined,
     allBirdsNames: BIRDS_NAMES,
     allBirdsData: birdsDataEn,
-    appLanguage: 'en',
+    appLanguage: 'eng',
   });
 }

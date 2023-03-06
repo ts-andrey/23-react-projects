@@ -80,3 +80,7 @@ a {
 
   transform: translateY(-50%);
 }
+
+.score__margin {
+  margin-right: 5px;
+}

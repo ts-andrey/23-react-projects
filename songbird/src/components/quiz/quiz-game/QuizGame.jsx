@@ -6,9 +6,11 @@ import QuizAct from '../quiz-act/QuizAct';
 import QuizDescr from '../quiz-descr/QuizDescr';
 import EndRoundModal from './end-round-modal/EndRoundModal';
 
+import { btnNextQuestionText } from './QuizGame.langData';
+
 export default function QuizGame() {
   const [globalState, dispatchAction] = useStore();
-  const { isGuessed, isSequenceCleared, questionNumber } = globalState;
+  const { isGuessed, isSequenceCleared, questionNumber, appLanguage } = globalState;
 
   function resetGameState() {
     dispatchAction('RESET_GUESED');
@@ -37,7 +39,7 @@ export default function QuizGame() {
               : classes['button__disabled'])}
             onClick={nextRoundHandler}
           >
-            Next Question
+            {btnNextQuestionText[appLanguage]}
           </button>
           {isSequenceCleared ? <EndRoundModal resetGameState={resetGameState} /> : null}
         </div>

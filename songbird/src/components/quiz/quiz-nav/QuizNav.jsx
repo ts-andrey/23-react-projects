@@ -3,8 +3,11 @@ import { useStore } from '../../../hook-store/store';
 
 import classes from './QuizNav.module.css'
 
+import { navLinkText } from './QuizNav.langData';
+
 export default function QuizNav() {
-  const dispatchAction = useStore()[1];
+  const [globalState, dispatchAction] = useStore();
+  const { appLanguage } = globalState;
 
   const setActiveClass = ({ isActive }) => isActive ? classes.active : undefined;
 
@@ -21,22 +24,22 @@ export default function QuizNav() {
     <>
       <ul className={classes.list}>
         <li>
-          <NavLink to={'warmup'} className={setActiveClass} onClick={clickLinkHandler}>warmup</NavLink>
+          <NavLink to={'warmup'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.warmup[appLanguage]}</NavLink>
         </li>
         <li>
-          <NavLink to={'passerines'} className={setActiveClass} onClick={clickLinkHandler}>passerines</NavLink>
+          <NavLink to={'passerines'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.passerine[appLanguage]}</NavLink>
         </li>
         <li>
-          <NavLink to={'singers'} className={setActiveClass} onClick={clickLinkHandler}>singers</NavLink>
+          <NavLink to={'singers'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.singer[appLanguage]}</NavLink>
         </li>
         <li>
-          <NavLink to={'forest-birds'} className={setActiveClass} onClick={clickLinkHandler}>forest birds</NavLink>
+          <NavLink to={'forest-birds'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.forest[appLanguage]}</NavLink>
         </li>
         <li>
-          <NavLink to={'predators'} className={setActiveClass} onClick={clickLinkHandler}>predators</NavLink>
+          <NavLink to={'predators'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.predator[appLanguage]}</NavLink>
         </li>
         <li>
-          <NavLink to={'sea-birds'} className={setActiveClass} onClick={clickLinkHandler}>sea birds</NavLink>
+          <NavLink to={'sea-birds'} className={setActiveClass} onClick={clickLinkHandler}>{navLinkText.sea[appLanguage]}</NavLink>
         </li>
       </ul>
     </>

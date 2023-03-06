@@ -12,10 +12,10 @@ export default function Quiz() {
   const [globalState, dispatchAction] = useStore();
   const location = useLocation().pathname;
 
-  const { isPlaying, questionNumber, isScoresGuarded } = globalState;
+  const { isPlaying, questionNumber, isScoresGuarded, appLanguage } = globalState;
 
   useEffect(() => {
-    
+
     const dataOrder = BIRDS_TYPES[location];
     Number.isInteger(dataOrder) ? dispatchAction('GAME_START') : dispatchAction('RESET_GAME');
 
@@ -27,7 +27,7 @@ export default function Quiz() {
     dispatchAction('UNGUARD_SCORES')
     dispatchAction('UPDATE_QUESTION_DATA');
     dispatchAction('UPDATE_CURRENT_ROUTE', location);
-  }, [location, questionNumber]);
+  }, [location, questionNumber, appLanguage]);
 
   return (
     <>

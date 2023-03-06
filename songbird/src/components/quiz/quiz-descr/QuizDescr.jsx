@@ -5,17 +5,19 @@ import classes from './QuizDescr.module.css';
 import QuizAudio from './quiz-audio/QuizAudio';
 import img from '../../../assets/bird_default.webp';
 
+import { birdDataText } from './QuizDescr.langData';
+
 export default function QuizDescr() {
   const globalState = useStore()[0];
-  const { currentBird, isGuessed } = globalState;
+  const { currentBird, isGuessed, appLanguage } = globalState;
 
-  let description = <h2>Name: ???</h2>;
+  let description = <h2>{birdDataText.name[appLanguage]} ???</h2>;
   if (isGuessed) {
     description = (
       <>
-        <h2><span className={classes['bird-data']}>Name:</span>{currentBird.name}</h2>
-        <h3><span className={classes['bird-data']}>Species:</span>{currentBird.species}</h3>
-        <p><span className={classes['bird-data']}>Description:</span>{currentBird.description}</p>
+        <h2><span className={classes['bird-data']}>{birdDataText.name[appLanguage]}</span>{currentBird.name}</h2>
+        <h3><span className={classes['bird-data']}>{birdDataText.species[appLanguage]}</span>{currentBird.species}</h3>
+        <p><span className={classes['bird-data']}>{birdDataText.description[appLanguage]}</span>{currentBird.description}</p>
       </>
     )
   }
