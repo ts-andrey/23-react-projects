@@ -5,16 +5,16 @@ export const languageText = {
 
 export const linkRouteText = {
   home: {
-    eng: 'Welcome',
+    eng: 'Home',
     ru: 'Домой',
   },
   game: {
     eng: 'Quiz',
-    ru: 'Викторина',
+    ru: 'Опрос',
   },
   score: {
     eng: 'Scores',
-    ru: 'Результаты',
+    ru: 'Очки',
   },
 }
 

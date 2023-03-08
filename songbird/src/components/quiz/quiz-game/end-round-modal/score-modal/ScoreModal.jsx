@@ -33,8 +33,8 @@ export default function ScoreModal() {
   return (
     <>
       <div className={classes['score-modal']}>
-        <h2>{scoreHeaderText[appLanguage]}</h2>
-        <h3>{scoreSubheaderText[appLanguage]}</h3>
+        <h2 className={classes['score-modal__header']}>{scoreHeaderText(scores, appLanguage)}</h2>
+        <h3 className={classes['score-modal__subheader']}>{scoreSubheaderText[appLanguage]}</h3>
         <label className={classes['score-modal__label']}>
           {scoreLabelText[appLanguage]}
           <input className={classes['score-modal__input']} type="text" name="text" placeholder='Type something already!' onChange={changeUserNameHandler} />

@@ -5,20 +5,17 @@
 .image-wrapper {
   display: flex;
   justify-content: flex-start;
-  
+
   height: auto;
   max-height: 50vh;
-  min-height: 25vh;
-  
+
   width: auto;
   max-width: 25vw;
-  min-width: 25vw;
 }
 
 .image-wrapper img {
   height: inherit;
   max-height: inherit;
-  min-height:inherit;
 
   width: inherit;
   max-width: inherit;
@@ -33,11 +30,82 @@
   text-align: left;
 }
 
-.bird-data{
+h2,
+h3 {
+  text-align: left;
+}
+
+.bird-data {
   margin-right: 10px;
 
   font-size: 110%;
   font-style: italic;
   letter-spacing: .4px;
   color: #ffd478;
+}
+
+.bird__description {
+  max-width: 570px;
+}
+
+@media screen and (max-width: 1200px) {
+  .image-wrapper {
+    max-width: 200px;
+    max-height: 30vh;
+
+    height: auto;
+  }
+
+  .bird-data__wrapper {
+    margin-left: 30px;
+  }
+
+  .bird__name {
+    margin: 12px 0;
+  }
+
+  .bird__species {
+    margin: 8px 0;
+  }
+
+  .bird__description {
+    max-width: fit-content;
+    margin: 0;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .image-wrapper {
+    max-height: 180px;
+
+    margin-bottom: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .description {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+
+  }
+
+  .bird__description {
+    font-size: 14px;
+  }
+
+  .bird-data__wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .bird__description {
+    font-size: 12px;
+  }
+
+  .bird-data__wrapper {
+    margin-left: 10px;
+  }
 }

@@ -1,7 +1,7 @@
 .scores__wrapper {
   max-height: 90%;
   overflow-y: auto;
-  
+
   margin-left: 50vw;
   transform: translateX(-50%);
 }
@@ -10,7 +10,6 @@
   position: relative;
   padding: 5px 10px;
 
-
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -18,7 +17,7 @@
 .scores th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #04b964;
   color: white;
 
@@ -45,8 +44,6 @@
   background-color: #04a4b9;
 }
 
-
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -66,4 +63,17 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #ffd755;
+}
+
+
+@media screen and (max-width: 860px) {
+  .scores__wrapper {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .scores__wrapper {
+    font-size: 13px;
+  }
 }

@@ -84,3 +84,64 @@ a {
 .score__margin {
   margin-right: 5px;
 }
+
+@media screen and (max-width: 1200px) {
+  .nav__list a {
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .header {
+    font-size: 14px;
+  }
+
+  .lang__wrapper {
+    left: 20px;
+  }
+
+  .lang__descr {
+    display: none;
+  }
+
+  .lang {
+    padding: 6px 5px;
+  }
+
+  .nav__list{
+    padding-left: 0;
+  }
+
+  .nav__list a {
+    padding: 6px 12px;
+  }
+
+  .score__wrapper {
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .header {
+    font-size: 13px;
+  }
+
+  
+  .lang__margin {
+    margin: 0 2px;
+  }
+
+
+  .nav__list a {
+    padding: 6px;
+  }
+
+  .lang__wrapper {
+    left: 10px;
+  }
+
+  .score__wrapper {
+    right: 10px;
+  }
+
+}

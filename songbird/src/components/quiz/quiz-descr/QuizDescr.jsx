@@ -15,9 +15,9 @@ export default function QuizDescr() {
   if (isGuessed) {
     description = (
       <>
-        <h2><span className={classes['bird-data']}>{birdDataText.name[appLanguage]}</span>{currentBird.name}</h2>
-        <h3><span className={classes['bird-data']}>{birdDataText.species[appLanguage]}</span>{currentBird.species}</h3>
-        <p><span className={classes['bird-data']}>{birdDataText.description[appLanguage]}</span>{currentBird.description}</p>
+        <h2 className={classes['bird__name']}><span className={classes['bird-data']}>{birdDataText.name[appLanguage]}</span>{currentBird.name}</h2>
+        <h3 className={classes['bird__species']}><span className={classes['bird-data']}>{birdDataText.species[appLanguage]}</span>{currentBird.species}</h3>
+        <p className={classes['bird__description']}><span className={classes['bird-data']}>{birdDataText.description[appLanguage]}</span>{currentBird.description}</p>
       </>
     )
   }
@@ -28,10 +28,8 @@ export default function QuizDescr() {
         <img src={isGuessed ? currentBird.image : img} alt="bird image" />
       </div>
       <div className={classes['bird-data__wrapper']}>
-        <div>
-          <QuizAudio birdSoundUrl={currentBird.audio} />
-          {description}
-        </div>
+        <QuizAudio birdSoundUrl={currentBird.audio} />
+        {description}
       </div>
     </div>
   )

@@ -62,7 +62,36 @@
 
 }
 
-
 .margin-left {
   margin-left: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+  .button {
+    font-size: 16px;
+    padding: 14px 40px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .modal{
+    width: 92vw;
+    padding: 20px 10px;
+  }
+
+  .button-wrapper{
+    margin-top: 10px;
+  }
+  
+  .button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }

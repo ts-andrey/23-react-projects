@@ -1,0 +1,25 @@
+ audio {
+   height: 30px;
+   width: 400px;
+ }
+
+ @media screen and (max-width: 1200px) {
+   audio {
+     height: 30px;
+     width: 300px;
+   }
+ }
+
+ @media screen and (max-width: 860px) {
+   audio {
+     height: 25px;
+     width: 250px;
+
+     margin-left: 50%;
+     transform: translateX(-50%);
+   }
+ }
+
+ @media screen and (max-width: 430px) {
+  
+ }

@@ -1,9 +1,9 @@
+import classes from './QuizAudio.module.css';
+
 function QuizAudio({ birdSoundUrl }) {
   return (
     <>
-      <div>
-        <audio controls src={birdSoundUrl}></audio>
-      </div>
+      <audio controls src={birdSoundUrl}></audio>
     </>
   )
 }

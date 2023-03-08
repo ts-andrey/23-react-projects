@@ -2,3 +2,15 @@
   margin-left: 50vw;
   transform: translate(-50%);
 }
+
+@media screen and (max-width: 860px) {
+  .greet {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .greet {
+    font-size: 13px;
+  }
+}

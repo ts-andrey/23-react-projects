@@ -1,7 +1,7 @@
 export const scoreHeaderText = (scores, lang) => {
   switch (lang) {
-    case eng: return `Congratulations! You earned ${scores} point(s) by taking this quiz!`;
-    case ru: return `Поздравляю! Вам удалось набрать в викторине следующее количество очков: ${scores}`;
+    case 'eng': return `Congratulations! You earned ${scores} point(s) by taking this quiz!`;
+    case 'ru': return `Поздравляю! Вам удалось набрать в викторине следующее количество очков: ${scores}`;
   }
 }
 export const scoreSubheaderText = {

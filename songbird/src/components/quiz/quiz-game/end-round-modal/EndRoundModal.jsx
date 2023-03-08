@@ -40,7 +40,7 @@ export default function EndRoundModal({ resetGameState }) {
         <h3>{endRoundSubheaderText[appLanguage]}</h3>
         <div className={classes['button-wrapper']}>
           <button
-            className={`${classes.button} ${classes['margin-left']} `}
+            className={`${classes.button}`}
             onClick={nextSectionHandler}
           >
             {btnContinueText[appLanguage]}

@@ -89,3 +89,50 @@
   background-color: #000000e0;
   color: aliceblue;
 }
+
+
+.score-modal__header {
+  margin: 0 0 10px 0;
+}
+
+.score-modal__subheader {
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .score-modal__btn {
+    padding: 14px 42px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .score-modal {
+    padding: 20px 10px;
+    width: 90vw;
+  }
+
+  .score-modal__input {
+    font-size: 12px;
+  }
+
+  .score-modal__btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .margin-right {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .score-modal__input {
+    font-size: 11px;
+  }
+
+  .score-modal__btn {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
