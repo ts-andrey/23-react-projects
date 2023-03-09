@@ -44,6 +44,24 @@
 @media screen and (max-width: 860px) {
   .list {
     font-size: 14px;
+    top: 10px;
+    left: 15px;
+
+    transform: translateY(0);
+
+    z-index: 5;
+  }
+
+  .list a {
+    margin: 0;
+    margin-bottom: 2px;
+
+    border-bottom: 2px solid transparent;
+  }
+
+  .list a:hover,
+  .list a.active {
+    border-bottom: 2px solid #9ee4e9;
   }
 }
 

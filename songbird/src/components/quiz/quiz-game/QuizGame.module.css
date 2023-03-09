@@ -70,16 +70,17 @@
   }
 
   .quiz-wrapper {
-    padding: 0 5vw 0 90px;
+    padding: 0 20px;
   }
 
+  .button-wrapper {
+    justify-content: center;
+  }
 
   .button {
     font-size: 14px;
     padding: 12px 30px;
 
-    margin-left: 50%;
-    transform: translateX(-50%);
   }
 }
 

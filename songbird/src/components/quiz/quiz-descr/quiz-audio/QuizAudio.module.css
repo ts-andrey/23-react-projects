@@ -13,13 +13,14 @@
  @media screen and (max-width: 860px) {
    audio {
      height: 25px;
-     width: 250px;
+     width: 240px;
 
-     margin-left: 50%;
-     transform: translateX(-50%);
+     justify-self: center;
    }
  }
 
  @media screen and (max-width: 430px) {
-  
+   audio {
+     justify-self: end;
+   }
  }

@@ -11,7 +11,7 @@ export default function QuizDescr() {
   const globalState = useStore()[0];
   const { currentBird, isGuessed, appLanguage } = globalState;
 
-  let description = <h2>{birdDataText.name[appLanguage]} ???</h2>;
+  let description = <h2 className={classes['bird__name_temp']}> {birdDataText.name[appLanguage]} ???</ h2>;
   if (isGuessed) {
     description = (
       <>

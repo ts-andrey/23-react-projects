@@ -57,8 +57,7 @@
   .answer-list {
     padding: 6px 12px;
 
-    margin-left: 50%;
-    transform: translateX(-50%);
+    justify-self: center;
   }
 
   .answer {
