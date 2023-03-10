@@ -1,7 +1,3 @@
-export const languageText = {
-  eng: 'Language:',
-  ru: 'Язык:',
-}
 
 export const linkRouteText = {
   home: {

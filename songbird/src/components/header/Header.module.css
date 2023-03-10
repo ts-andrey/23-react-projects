@@ -9,36 +9,6 @@ a {
   background-image: radial-gradient(circle, #2e0026 50%, #250020 100%);
 }
 
-.lang__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50px;
-
-  transform: translateY(-50%);
-
-  letter-spacing: .4px;
-}
-
-.lang__descr {
-  color: #ffd478;
-  margin-right: 5px;
-}
-
-.lang__margin {
-  margin: 0 5px;
-}
-
-.lang {
-  padding: 5px 10px;
-  color: #04b964;
-}
-
-.lang:hover {
-  color: #9ee4e9;
-  cursor: pointer;
-}
-
-
 .nav {
   padding: 0px 40px;
 }
@@ -96,18 +66,6 @@ a {
     font-size: 14px;
   }
 
-  .lang__wrapper {
-    left: 20px;
-  }
-
-  .lang__descr {
-    display: none;
-  }
-
-  .lang {
-    padding: 6px 5px;
-  }
-
   .nav__list{
     padding-left: 0;
   }
@@ -126,18 +84,8 @@ a {
     font-size: 13px;
   }
 
-  
-  .lang__margin {
-    margin: 0 2px;
-  }
-
-
   .nav__list a {
     padding: 6px;
-  }
-
-  .lang__wrapper {
-    left: 10px;
   }
 
   .score__wrapper {
