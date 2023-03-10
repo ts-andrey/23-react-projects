@@ -11,7 +11,7 @@
   display: grid;
   justify-items: start;
   grid-template-columns: 100%;
-  grid-row: auto auto;
+  grid-template-rows: repeat(2, auto);
 }
 
 .button-wrapper {

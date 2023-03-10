@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useStore } from '../../hook-store/store';
 
 import classes from './Header.module.css';
@@ -7,6 +7,7 @@ import { linkRouteText, resultScoreText } from './Header.langData';
 import HeaderMenu from './header-menu/HeaderMenu';
 
 export default function Header() {
+  const location = useLocation().pathname;
   const globalState = useStore()[0];
   const { scores, appLanguage } = globalState;
 
@@ -28,7 +29,17 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      <div className={classes['score__wrapper']}><span className={classes['score__margin']}>{resultScoreText[appLanguage]}</span><span>{scores}</span></div>
+      {location.includes('quiz')
+        ? (
+          <div className={classes['score__wrapper']}>
+            <span className={classes['score__margin']}>
+              {resultScoreText[appLanguage]}
+            </span>
+            <span>{scores}</span>
+          </div>
+        )
+        : null
+      }
     </header>
   )
 }

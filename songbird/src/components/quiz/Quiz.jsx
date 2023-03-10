@@ -12,7 +12,7 @@ export default function Quiz() {
   const [globalState, dispatchAction] = useStore();
   const location = useLocation().pathname;
 
-  const { isPlaying, questionNumber, isScoresGuarded, appLanguage } = globalState;
+  const { isPlaying, questionNumber, isScoresGuarded, appLanguage, difficulty } = globalState;
 
   useEffect(() => {
 
@@ -27,7 +27,7 @@ export default function Quiz() {
     dispatchAction('UNGUARD_SCORES')
     dispatchAction('UPDATE_QUESTION_DATA');
     dispatchAction('UPDATE_CURRENT_ROUTE', location);
-  }, [location, questionNumber, appLanguage]);
+  }, [location, questionNumber, appLanguage, difficulty]);
 
   return (
     <>

@@ -19,8 +19,10 @@ export const configureQuestionStore = () => {
       return ({ questionData: { randomAnswers, correctAnswer, correctAnswerNumber } })
     },
 
-    SET_DIFFICULTY: (state, mode) => ({ answerAmount: GAME_MODES[mode] })
+    SET_DIFFICULTY: (state, mode) => ({ answerAmount: GAME_MODES[mode] }),
+
+    UPDATE_MODE: (state, newMode) => ({ difficulty: newMode, answerAmount: GAME_MODES[newMode] }),
   }
 
-  initStore(actions, { questionNumber: 0, questionData: undefined, answerAmount: GAME_MODES.easy })
+  initStore(actions, { questionNumber: 0, questionData: undefined, difficulty: 'easy', answerAmount: GAME_MODES.easy })
 }

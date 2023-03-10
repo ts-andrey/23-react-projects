@@ -13,6 +13,7 @@ const setAnswerClass = (isAnswerRight) => {
 
 const playAnswerSound = (isAnswerRight) => {
   const answerSound = new Audio(isAnswerRight ? correctSound : wrongSound);
+  isAnswerRight ? answerSound.volume = 1 : answerSound.volume = 0.4;
   answerSound.play();
 }
 

@@ -1,11 +1,11 @@
 export const endRoundHeaderText = {
   eng: 'Congratulations! You just finished this section of questions!',
-  ru: 'Поздравляю Вас с окончанием текущей секции вопросов!',
+  ru: 'Поздравляю Вас с окончанием текущего раунда!',
 }
 
 export const endRoundSubheaderText = {
-  eng: 'Please consider your next options. Would you like to continue playing (untill the end of the next round) or finish the game?',
-  ru: 'Пожалуйста обдумайте свои дальнейшие возможности. Вы можете продолжить играть (до конца следующего раунда) или закончить игру.',
+  eng: 'Would you like to continue playing (till the end of the next round) or finish the game?',
+  ru: 'Вы можете продолжить играть (до конца следующего раунда) или закончить игру.',
 }
 
 export const btnContinueText = {
