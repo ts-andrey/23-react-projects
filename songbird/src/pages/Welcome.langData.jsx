@@ -4,7 +4,7 @@ export const welcomeHeaderText = {
 }
 export const welcomeSubheaderFirstText = {
   eng: `This is a song quiz about birds. There you can listen to the sound of the bird and try to find the bird name among offered answeres. The faster you guess the more score you can get and rate higher among others. And after guessing you can read some info about the bird. In the left corner of the app you can change the app language and the game difficulty,  please avoid to do that in the middle of the game`,
-  ru: 'Это звуковая викторина о птицах. Здесь Вы можете прослушать звуковую дорожку со звучанием птицы и попытаться найти верный ответ среди предложенных. Чем быстрее Вы угадаете правильный ответ, тем больше очков Вы сможете заработать и занять более высокую позицую в рейтинге. Также после выбора правильного ответа можно почитать краткую информацию о птице. В левом верхнем углу можно сменить название приложения и сложно игры, но не рекомендуется делать это в середине игры.',
+  ru: 'Это звуковая викторина о птицах. Здесь Вы можете прослушать звуковую дорожку со звучанием птицы и попытаться найти верный ответ среди предложенных. Чем быстрее Вы угадаете правильный ответ, тем больше очков Вы сможете заработать и занять более высокую позицую в рейтинге. Также после выбора правильного ответа можно почитать краткую информацию о птице. В левом верхнем углу можно сменить название приложения и сложность игры, но не рекомендуется делать это в середине игры.',
 }
 export const welcomeSubheaderSecondText = {
   eng: 'To proceed to the game select Quiz in the main navigation.',
