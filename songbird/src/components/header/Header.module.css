@@ -5,8 +5,11 @@ a {
 
 .header {
   position: relative;
+  z-index: 100;
+  
   width: 100vw;
-  background-image: radial-gradient(circle, #2e0026 50%, #250020 100%);
+  background:rgba(36, 41, 47, 0.6);
+  color: #dbffee;
 }
 
 .nav {
@@ -27,7 +30,6 @@ a {
 
   padding: 15px 30px;
 
-  color: #ffd478;
 
   letter-spacing: 0.25px;
 
@@ -38,9 +40,9 @@ a {
 
 .nav__list a:hover,
 .nav__list a.active {
-  color: #9ee4e9;
+  color: #ffd478;
 
-  border-bottom: 3px solid #9ee4e9;
+  border-bottom: 3px solid #ffd478;
 }
 
 .score__wrapper {

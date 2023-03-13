@@ -1,10 +1,11 @@
 .footer {
   width: 100vw;
 
-  padding: 20px 40px;
+  padding: 10px 20px;
 
-  background-image: radial-gradient(circle, #22001d 50%, #1a0016 100%);
-  color: #ffd478;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .list {
@@ -16,20 +17,14 @@
   justify-content: flex-end;
 }
 
-@media screen and (max-width: 1200px) {
-  
-}
-
 @media screen and (max-width: 860px) {
   .footer {
-    padding: 15px 30px;
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 430px) {
   .footer {
-    padding: 10px 20px;
     font-size: 13px;
   }
 }

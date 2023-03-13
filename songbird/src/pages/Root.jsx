@@ -22,6 +22,7 @@ function Root() {
       <main className={classes.main}>
         <Outlet />
       </main>
+      <div className={classes.bg}></div>
       <Footer />
     </>
   )

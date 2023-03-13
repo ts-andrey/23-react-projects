@@ -15,7 +15,6 @@ function Welcome() {
         <h2>{welcomeSubheaderSecondText[appLanguage]}</h2>
         <h3>{welcomeSubheaderThirdText[appLanguage]}</h3>
       </section>
-      <div className={classes.bg}></div>
     </>
   )
 }

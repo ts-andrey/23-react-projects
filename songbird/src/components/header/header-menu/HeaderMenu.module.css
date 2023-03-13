@@ -9,7 +9,7 @@
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-
+  
   z-index: 250;
 
   padding: 10px;
@@ -31,7 +31,7 @@
   width: 15px;
   height: 2px;
 
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #dbffee;
 
   transition: all .25s;
 }
@@ -61,7 +61,6 @@
   position: absolute;
   left: 40px;
   top: 45px;
-
   z-index: 200;
 
   width: fit-content;
@@ -94,6 +93,7 @@
 
 .header-menu__item {
   position: relative;
+  z-index: 200;
   width: 100px;
 
   display: flex;
@@ -133,6 +133,8 @@
   position: absolute;
   top: 50%;
   left: 0;
+
+  z-index: 200;
 
   margin-left: 100px;
 
@@ -188,10 +190,6 @@
 
   background-color: #000000c4;
 }
-
-
-
-@media screen and (max-width: 1200px) {}
 
 @media screen and (max-width: 860px) {
   .option__wrapper {

@@ -1,5 +1,7 @@
 .main {
   position: relative;
+  z-index: 10;
+  
   flex-grow: 1;
 
   display: flex;
@@ -7,6 +9,62 @@
 
   overflow: hidden;
 
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 100vw;
+  height: 100vh;
+  
+  opacity: .15;
+  animation: changeBg 30s infinite cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+@keyframes changeBg {
+
+  0%,
+  100% {
+    background: center / cover no-repeat url('./../assets/bg-img/bg-1.webp');
+  }
+
+  10% {
+    background-image: url('./../assets/bg-img/bg-2.webp');
+  }
+
+  20% {
+    background-image: url('./../assets/bg-img/bg-3.webp');
+  }
+
+  30% {
+    background-image: url('./../assets/bg-img/bg-4.webp');
+  }
+
+  40% {
+    background-image: url('./../assets/bg-img/bg-5.webp');
+  }
+
+  50% {
+    background-image: url('./../assets/bg-img/bg-6.webp');
+  }
+
+  60% {
+    background-image: url('./../assets/bg-img/bg-7.webp');
+  }
+
+  70% {
+    background-image: url('./../assets/bg-img/bg-8.webp');
+  }
+
+  80% {
+    background-image: url('./../assets/bg-img/bg-9.webp');
+  }
+
+  90% {
+    background-image: url('./../assets/bg-img/bg-10.webp');
+  }
 }
 
 

@@ -17,7 +17,7 @@
   display: inline-block;
   text-decoration: none;
 
-  color: #ffd478;
+  color: #9dedc8;
 
   border-radius: 0px 0px 10px 10px;
   border-bottom: 3px solid transparent;
@@ -30,9 +30,9 @@
 
 .list a:hover,
 .list a.active {
-  color: #9ee4e9;
+  color: #fcd93f;
 
-  border-bottom: 3px solid #9ee4e9;
+  border-bottom: 3px solid #ffd478;
 }
 
 @media screen and (max-width: 1200px) {

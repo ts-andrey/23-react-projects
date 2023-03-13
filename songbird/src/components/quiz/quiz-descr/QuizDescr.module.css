@@ -1,5 +1,6 @@
 .description {
   display: flex;
+  color: #dbffee;
 }
 
 .image-wrapper {
@@ -42,7 +43,7 @@ h3 {
   font-size: 110%;
   font-style: italic;
   letter-spacing: .4px;
-  color: #ffd478;
+  color: #fcd93f;
 }
 
 .bird__description {
