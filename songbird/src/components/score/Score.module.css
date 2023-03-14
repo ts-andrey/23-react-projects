@@ -1,9 +1,11 @@
 .scores__wrapper {
-  max-height: 90%;
-  overflow-y: auto;
-
-  margin-left: 50vw;
+  position: absolute;
+  top: 50px;
+  left: 50%;
   transform: translateX(-50%);
+  
+  max-height: 90%;
+  overflow-y: auto;  
 }
 
 .scores {
