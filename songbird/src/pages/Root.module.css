@@ -1,7 +1,7 @@
 .main {
   position: relative;
   z-index: 10;
-  
+
   flex-grow: 1;
 
   display: flex;
@@ -15,21 +15,17 @@
   position: absolute;
   top: 0;
   left: 0;
-  
+
   width: 100vw;
   height: 100vh;
-  
+
   opacity: .15;
-  animation: changeBg 30s infinite cubic-bezier(1, 0.1, 0.1, 1);
+  background: center / cover no-repeat url('./../assets/bg-img/bg-1.webp');
+
+  animation: 30s cubic-bezier(1, 0, 0, 1) infinite changeBg;
 }
 
 @keyframes changeBg {
-
-  0%,
-  100% {
-    background: center / cover no-repeat url('./../assets/bg-img/bg-1.webp');
-  }
-
   10% {
     background-image: url('./../assets/bg-img/bg-2.webp');
   }
@@ -65,8 +61,11 @@
   90% {
     background-image: url('./../assets/bg-img/bg-10.webp');
   }
-}
 
+  100% {
+    background-image: url('./../assets/bg-img/bg-1.webp');
+  }
+}
 
 @media screen and (max-width: 860px) {
   .main {
