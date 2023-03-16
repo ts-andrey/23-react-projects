@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css';
+import './global.vars.css';
+
+import Root from './pages/Root';
+
 import About from './pages/About';
 import CodeSamples from './pages/CodeSamples';
 import Projects from './pages/Projects';
-
-import Root from './pages/Root';
 
 const router = createBrowserRouter([
   {

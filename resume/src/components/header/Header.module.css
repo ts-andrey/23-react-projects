@@ -1,3 +1,11 @@
-.header{
-  
+.header {
+  padding: 15px 0;
+
+  display: flex;
+  place-content: center;
+
+  color: var(--header-font-color);
+  background: var(--header-bg-color);
+
+  font-size: 18px;
 }
