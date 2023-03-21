@@ -37,6 +37,10 @@
   display: flex;
 }
 
+.sub-header{
+  color: var(--color-attract-second);
+}
+
 .lang {
   position: relative;
   transition: all var(--transition-main);

@@ -13,9 +13,9 @@
 
 .main-header {
   margin: 0 0 20px 0;
+  color: var(--color-font-main);
 }
 
-
-
-
-
+.sub-header {
+  color: var(--color-attract-second);
+}

@@ -16,7 +16,7 @@ export default function Education() {
         <div className={classes.place}>
           <Link to={'https://rs.school/js/'} target='_blank'>
             <p>JavaScript/Front-end</p>
-            The Rolling Scopes School, 2022
+            <span>The Rolling Scopes School, 2022</span>
           </Link>
         </div>
 

@@ -15,7 +15,7 @@ export default function Skills() {
             <p>HTML5</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://www.markdownguide.org/basic-syntax/'} target='_blank'>
+          <Link className={classes.skill} to={'https://www.markdownguide.org/basic-syntax'} target='_blank'>
             <div style={{ background: skillLevelSetter(80) }}></div>
             <p>Markdown</p>
           </Link>
@@ -25,12 +25,12 @@ export default function Skills() {
             <p>CSS3</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://sass-lang.com/documentation/'} target='_blank'>
+          <Link className={classes.skill} to={'https://sass-lang.com/documentation'} target='_blank'>
             <div style={{ background: skillLevelSetter(60) }}></div>
             <p>Sass</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://javascript.info/'} target='_blank'>
+          <Link className={classes.skill} to={'https://javascript.info'} target='_blank'>
             <div style={{ background: skillLevelSetter(70) }}></div>
             <p>JavaScript</p>
           </Link>
@@ -40,12 +40,12 @@ export default function Skills() {
             <p>React</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://react.dev/reference/react'} target='_blank'>
+          <Link className={classes.skill} to={'https://redux.js.org'} target='_blank'>
             <div style={{ background: skillLevelSetter(35) }}></div>
             <p>Redux</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://git-scm.com/'} target='_blank'>
+          <Link className={classes.skill} to={'https://git-scm.com'} target='_blank'>
             <div style={{ background: skillLevelSetter(40) }}></div>
             <p>Git</p>
           </Link>
@@ -55,18 +55,18 @@ export default function Skills() {
             <p>Github</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://code.visualstudio.com/'} target='_blank'>
+          <Link className={classes.skill} to={'https://code.visualstudio.com'} target='_blank'>
             <div style={{ background: skillLevelSetter(60) }}></div>
             <p>VSCode</p>
           </Link>
 
-          <Link className={classes.skill} to={'https://www.figma.com/'} target='_blank'>
+          <Link className={classes.skill} to={'https://www.figma.com'} target='_blank'>
             <div style={{ background: skillLevelSetter(45) }}></div>
             <p>Figma</p>
           </Link>
         </div>
 
-        <h3>My languages</h3>
+        <h3 className={classes['sub-header']}>My languages</h3>
         <div className={classes.langs}>
           <Link className={classes.lang} to={'https://rm.coe.int/CoERMPublicCommonSearchServices/DisplayDCTMContent?documentId=090000168045bb52'} target='_blank'>
             <span className={classes['lang-descr']}>English:</span>
