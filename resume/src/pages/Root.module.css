@@ -1,0 +1,27 @@
+main {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-font-main);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-scroll);
+
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-attract-main);
+}

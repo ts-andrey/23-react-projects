@@ -4,8 +4,8 @@
   display: flex;
   place-content: center;
 
-  color: var(--header-font-color);
-  background: var(--header-bg-color);
+  color: var(--color-font-main);
+  background: var(--color-bg-header);
 
   font-size: 18px;
 }

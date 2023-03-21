@@ -1,3 +1,21 @@
-.about{
-  
+.section {
+  display: flex;
+  place-content: center;
+
+  color: var(--color-font-main);
 }
+
+.content-wrapper {
+  max-width: var(--width-content);
+
+  padding: 20px 40px;
+}
+
+.main-header {
+  margin: 0 0 20px 0;
+}
+
+
+
+
+

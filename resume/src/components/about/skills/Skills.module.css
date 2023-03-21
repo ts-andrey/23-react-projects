@@ -1,0 +1,69 @@
+.skillset {
+  display: grid;
+
+  grid-auto-flow: column;
+}
+
+.skill {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+  transition: all var(--transition-main);
+}
+
+.skill:hover {
+  color: var(--color-attract-main);
+}
+
+.skill p {
+  margin: 5px 0;
+}
+
+.skill div {
+  height: 150px;
+  width: 10px;
+
+  border-radius: 2px;
+}
+
+
+
+.langs {
+  margin-top: 10px;
+
+  display: flex;
+}
+
+.lang {
+  position: relative;
+  transition: all var(--transition-main);
+  margin-right: 30px;
+}
+
+.lang::after {
+  content: '';
+
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  height: 100%;
+  border-right: 2px dotted var(--color-font-main);
+}
+
+.lang:last-of-type::after {
+  content: none;
+}
+
+.lang:hover {
+  color: var(--color-attract-main);
+}
+
+.lang-descr {
+  display: inline-block;
+  width: 65px;
+}

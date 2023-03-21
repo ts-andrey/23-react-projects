@@ -1,0 +1,49 @@
+.personal {
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 0px 100px;
+}
+
+.personal-header {
+  margin: 0 0 10px 0;
+}
+
+
+
+.info-wrapper {
+  display: grid;
+  align-content: center;
+  gap: 5px 0px;
+  grid-auto-rows: max-content;
+}
+
+.info-descr {
+  display: inline-block;
+  width: 90px;
+}
+
+.link {
+  transition: all .25s;
+}
+
+.link:hover {
+  color: var(--color-attract-main);
+}
+
+
+
+
+.img-wrapper {
+  height: 200px;
+  width: auto;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+.img {
+  width: inherit;
+  height: inherit;
+}

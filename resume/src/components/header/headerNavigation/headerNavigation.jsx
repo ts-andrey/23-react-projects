@@ -7,7 +7,7 @@ const activeClassHandler = ({ isActive }) => isActive ? classes.active : '';
 export default function HeaderNavigation() {
   return (
     <>
-      <nav>
+      <nav className={classes.nav}>
         <ul className={classes['nav-list']}>
           <li><NavLink to={'about'} className={activeClassHandler}>About</NavLink></li>
           <li><NavLink to={'projects'} className={activeClassHandler}>Projects</NavLink></li>

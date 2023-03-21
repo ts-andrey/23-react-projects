@@ -1,22 +1,35 @@
+.nav {
+  display: flex;
+  place-items: center;
+}
+
 .nav-list {
   margin: 0;
   padding: 0;
 
   display: flex;
+  place-items: center;
+}
+
+.nav-list li {
+  display: flex;
+  place-items: center;
 }
 
 .nav-list a {
   padding: 5px 10px;
   margin-right: 5px;
 
-  color: var(--header-font-color);
+  color: var(--color-link);
+
+  transition: all var(--transition-main);
 }
 
 .nav-list a:hover,
 .nav-list a.active {
-  color: var(--header-font-color__hover);
+  color: var(--color-attract-main);
 }
 
 .active {
-  color: var(--header-font-color__hover);
+  color: var(--color-attract-main);
 }

@@ -1,10 +1,20 @@
 :root {
-  --main-bg-color: #242424;
-  --header-bg-color: #1b3761de;
+  --color-bg-main: #242424;
+  --color-bg-header: #1b3761de;
 
-  --main-font-color: #ffffffde;
-  --header-font-color: #dbdbdb;
-  --header-font-color__hover: #35e21e;
+  --color-font-main: #dbdbdb;
+
+  --color-link: #dbdbdb;
+
+  --color-attract-main: #35e21e;
+
+  --color-fill-main: #35e21e;
+  --color-scroll: #53add6;
+
+  --width-content: 900px;
+
+
+  --transition-main: .25s;
 }
 
 :root {
@@ -13,8 +23,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: var(--main-font-color);
-  background-color: var(--main-bg-color);
+  color: var(--color-font-main);
+  background-color: var(--color-bg-main);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
