@@ -6,7 +6,7 @@
 }
 
 .content-wrapper {
-  max-width: var(--width-content);
+  max-width: var(--width-content-projects);
 
   padding: 20px 40px;
 }
