@@ -9,7 +9,7 @@ export default function HeaderNavigation() {
     <>
       <nav className={classes.nav}>
         <ul className={classes['nav-list']}>
-          <li><NavLink to={'about'} className={activeClassHandler}>About</NavLink></li>
+          <li><NavLink to={''} className={activeClassHandler}>About</NavLink></li>
           <li><NavLink to={'projects'} className={activeClassHandler}>Projects</NavLink></li>
           <li><NavLink to={'code-samples'} className={activeClassHandler}>Code Samples</NavLink></li>
         </ul>
