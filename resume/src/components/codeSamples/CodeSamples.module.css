@@ -1,3 +1,45 @@
-.code{
-  
+.section {
+  display: flex;
+  place-content: center;
+
+  color: var(--color-font-main);
+}
+
+.content-wrapper {
+  max-width: var(--width-content);
+
+  padding: 20px 40px;
+
+  font-size: 14px;
+}
+
+.code-link__wrapper {
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 16px;
+}
+
+.code-link {
+  padding: 4px 8px;
+  margin: 5px;
+
+  border-radius: 2px;
+
+  background: var(--color-link);
+  color: var(--color-bg-main);
+
+  user-select: none;
+
+  transition: all .25s;
+}
+
+.code-link:hover,
+.code-link_active {
+  cursor: pointer;
+
+  background: var(--color-attract-main);
+  color: var(--color-bg-main);
 }

@@ -5,7 +5,7 @@ import Intro from './intro/Intro';
 import Personal from './perconal/Personal';
 import Skills from './skills/Skills';
 
-export default function () {
+export default function About() {
   return (
     <>
       <section className={classes.section}>
