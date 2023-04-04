@@ -35,3 +35,19 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --width-content-projects: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --width-content: 100%;
+  }
+}
+
+@media screen and (max-width: 00px) {}
+
+@media screen and (max-width: 00px) {}

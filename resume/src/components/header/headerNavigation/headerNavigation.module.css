@@ -33,3 +33,13 @@
 .active {
   color: var(--color-attract-main);
 }
+
+@media screen and (max-width: 400px) {
+  .nav{
+    font-size: 90%;
+  }
+
+  .nav-list a{
+    padding: 5px;
+  }
+}

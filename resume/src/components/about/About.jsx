@@ -10,8 +10,11 @@ export default function About() {
     <>
       <section className={classes.section}>
         <div className={classes['content-wrapper']}>
-          <h1 className={classes['main-header']}>Hello! My name is Andrei Tsakunou. I am a front-end developer.</h1>
-     
+          <h1 className={classes['main-header']}>
+            <span className={classes['main-header__text']}>Hello! My name is Andrei Tsakunou.</span>
+            <span className={classes['main-header__text']}>I am a front-end developer.</span>
+          </h1>
+
           <Personal />
 
           <h2 className={classes['sub-header']}>About myself</h2>

@@ -48,3 +48,27 @@
   width: inherit;
   height: inherit;
 }
+
+
+
+@media screen and (max-width: 860px) {
+  .personal {
+    gap: 0px 50px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .personal {
+    flex-direction: column-reverse;
+    gap: 10px 0px;
+  }
+
+  .personal-header{
+    line-height: 120%;
+    margin-bottom: 0;
+  }
+
+  .info-descr {
+    width: 75px;
+  }
+}

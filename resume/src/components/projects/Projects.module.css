@@ -18,3 +18,15 @@
 .sub-header {
   color: var(--color-attract-second);
 }
+
+
+@media screen and (max-width: 600px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .content-wrapper {
+    font-size: 90%;
+  }
+}

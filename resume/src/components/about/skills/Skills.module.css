@@ -22,13 +22,12 @@
   margin: 5px 0;
 }
 
-.skill div {
+.skill__amount {
   height: 150px;
   width: 10px;
 
   border-radius: 2px;
 }
-
 
 
 .langs {
@@ -37,7 +36,7 @@
   display: flex;
 }
 
-.sub-header{
+.sub-header {
   color: var(--color-attract-second);
 }
 
@@ -70,4 +69,130 @@
 .lang-descr {
   display: inline-block;
   width: 65px;
+}
+
+.skill__amount_html {
+  background: linear-gradient(to top, #35e21e 0% 80%, #0b0c10 80% 100%);
+}
+
+.skill__amount_markdown {
+  background: linear-gradient(to top, #35e21e 0% 80%, #0b0c10 80% 100%);
+}
+
+.skill__amount_css {
+  background: linear-gradient(to top, #35e21e 0% 80%, #0b0c10 80% 100%);
+}
+
+.skill__amount_sass {
+  background: linear-gradient(to top, #35e21e 0% 60%, #0b0c10 60% 100%);
+}
+
+.skill__amount_js {
+  background: linear-gradient(to top, #35e21e 0% 70%, #0b0c10 70% 100%);
+}
+
+.skill__amount_react {
+  background: linear-gradient(to top, #35e21e 0% 50%, #0b0c10 50% 100%);
+}
+
+.skill__amount_redux {
+  background: linear-gradient(to top, #35e21e 0% 40%, #0b0c10 40% 100%);
+}
+
+.skill__amount_react-native {
+  background: linear-gradient(to top, #35e21e 0% 15%, #0b0c10 15% 100%);
+}
+
+.skill__amount_git {
+  background: linear-gradient(to top, #35e21e 0% 50%, #0b0c10 50% 100%);
+}
+
+.skill__amount_github {
+  background: linear-gradient(to top, #35e21e 0% 50%, #0b0c10 50% 100%);
+}
+
+.skill__amount_vscode {
+  background: linear-gradient(to top, #35e21e 0% 60%, #0b0c10 60% 100%);
+}
+
+.skill__amount_figma {
+  background: linear-gradient(to top, #35e21e 0% 45%, #0b0c10 45% 100%);
+}
+
+
+@media screen and (max-width: 800px) {
+  .skillset{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px 50px;
+  }
+  
+  .skill {
+    flex-direction: row;
+    width: 250px;
+  }
+
+  .skill__amount {
+    height: 10px;
+    width: 150px;
+  
+    border-radius: 2px;
+
+    margin-right: 10px;
+  }
+
+  .skill__amount_html {
+    background: linear-gradient(to right, #35e21e 0% 80%, #0b0c10 80% 100%);
+  }
+  
+  .skill__amount_markdown {
+    background: linear-gradient(to right, #35e21e 0% 80%, #0b0c10 80% 100%);
+  }
+  
+  .skill__amount_css {
+    background: linear-gradient(to right, #35e21e 0% 80%, #0b0c10 80% 100%);
+  }
+  
+  .skill__amount_sass {
+    background: linear-gradient(to right, #35e21e 0% 60%, #0b0c10 60% 100%);
+  }
+  
+  .skill__amount_js {
+    background: linear-gradient(to right, #35e21e 0% 70%, #0b0c10 70% 100%);
+  }
+  
+  .skill__amount_react {
+    background: linear-gradient(to right, #35e21e 0% 50%, #0b0c10 50% 100%);
+  }
+  
+  .skill__amount_redux {
+    background: linear-gradient(to right, #35e21e 0% 40%, #0b0c10 40% 100%);
+  }
+  
+  .skill__amount_react-native {
+    background: linear-gradient(to right, #35e21e 0% 15%, #0b0c10 15% 100%);
+  }
+  
+  .skill__amount_git {
+    background: linear-gradient(to right, #35e21e 0% 50%, #0b0c10 50% 100%);
+  }
+  
+  .skill__amount_github {
+    background: linear-gradient(to right, #35e21e 0% 50%, #0b0c10 50% 100%);
+  }
+  
+  .skill__amount_vscode {
+    background: linear-gradient(to right, #35e21e 0% 60%, #0b0c10 60% 100%);
+  }
+  
+  .skill__amount_figma {
+    background: linear-gradient(to right, #35e21e 0% 45%, #0b0c10 45% 100%);
+  }
+}
+
+@media screen and (max-width: 600px){
+  .skillset{
+    gap: 0px 50px;
+  }
 }

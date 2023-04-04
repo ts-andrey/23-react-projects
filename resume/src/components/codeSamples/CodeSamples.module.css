@@ -20,11 +20,12 @@
   flex-wrap: wrap;
 
   font-size: 16px;
+
+  gap: 5px;
 }
 
 .code-link {
   padding: 4px 8px;
-  margin: 5px;
 
   border-radius: 2px;
 
@@ -42,4 +43,16 @@
 
   background: var(--color-attract-main);
   color: var(--color-bg-main);
+}
+
+@media screen and (max-width: 660px) {
+  .content-wrapper {
+    font-size: 80%;
+    padding: 20px 5px;
+  }
+
+  .code-link {
+    font-size: 80%;
+    padding: 5px;
+  }
 }
