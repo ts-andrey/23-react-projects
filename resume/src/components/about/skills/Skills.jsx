@@ -32,6 +32,11 @@ export default function Skills() {
             <p>JavaScript</p>
           </Link>
 
+          <Link className={classes.skill} to={'https://javascript.info'} target='_blank'>
+            <div className={`${classes['skill__amount']} ${classes['skill__amount_ts']}`}></div>
+            <p>TypeScript</p>
+          </Link>
+
           <Link className={classes.skill} to={'https://react.dev/reference/react'} target='_blank'>
             <div className={`${classes['skill__amount']} ${classes['skill__amount_react']}`}></div>
             <p>React</p>

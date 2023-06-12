@@ -91,6 +91,10 @@
   background: linear-gradient(to top, #35e21e 0% 70%, #0b0c10 70% 100%);
 }
 
+.skill__amount_ts {
+  background: linear-gradient(to top, #35e21e 0% 50%, #0b0c10 50% 100%);
+}
+
 .skill__amount_react {
   background: linear-gradient(to top, #35e21e 0% 50%, #0b0c10 50% 100%);
 }
@@ -160,6 +164,10 @@
   
   .skill__amount_js {
     background: linear-gradient(to right, #35e21e 0% 70%, #0b0c10 70% 100%);
+  }
+
+  .skill__amount_ts {
+    background: linear-gradient(to right, #35e21e 0% 50%, #0b0c10 50% 100%);
   }
   
   .skill__amount_react {
