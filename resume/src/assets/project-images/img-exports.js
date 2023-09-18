@@ -10,6 +10,8 @@ import christmas from './christmas-app.webp';
 import songBird from './song-bird.webp';
 import resume from './resume.webp';
 
+import coachFinder from './coach-finder.webp';
+
 export const museumPreImg = museumPre;
 export const customVideoPlayerImg = customVideoPlayer;
 export const drumKitImg = drumKit;
@@ -21,3 +23,5 @@ export const christmasImg = christmas;
 
 export const songBirdImg = songBird;
 export const resumeImg = resume;
+
+export const coachFinderImg = coachFinder;

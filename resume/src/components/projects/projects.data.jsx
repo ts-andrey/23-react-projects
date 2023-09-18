@@ -10,6 +10,8 @@ import {
 
   songBirdImg,
   resumeImg,
+
+  coachFinderImg
 } from '../../assets/project-images/img-exports';
 
 export const preProjects = [
@@ -82,5 +84,16 @@ export const reactProjects = [
     imgName: 'resume image',
     linkTo: `https://ants-resume.netlify.app`,
   },
+]
+
+export const vueProjects = [
+  {
+    projectName: `Coach Finder`,
+    projectDescription: `It is my first Vue project. By developing it I learned: how to work with routes, how to work with data in forms, how to work with styles and make them enclosed in the specific component id needed. I also learned how to work with properties: how to pass it from parent to children and other way around. In this project was used state managment library Vuex (since it was developed specifically for Vue), so I learned how to use it with Vue as well. Overal by working with this project I learned how to work with Vue by using it's main features.`,
+    imgSrc: coachFinderImg,
+    imgName: 'coach finder application image',
+    linkTo: `https://ants-coach-finder.netlify.app`,
+  },
+
 ]
 
