@@ -1,32 +1,3 @@
 .education {
   line-height: 1.4;
 }
-
-.place {
-  padding: 0 0 5px 0;
-
-  border-bottom: 1px dashed #fff;
-
-  user-select: none;
-}
-
-.place span {
-  font-size: 90%;
-  font-style: italic;
-}
-
-.education p {
-  margin: 10px 0 0 0;
-
-  font-size: 110%;
-}
-
-.education a {
-  color: var(--color-link);
-
-  transition: all var(--transition-main);
-}
-
-.education a:hover {
-  color: var(--color-attract-main);
-}

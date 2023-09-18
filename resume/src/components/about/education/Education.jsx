@@ -1,11 +1,29 @@
-import { Link } from 'react-router-dom';
-
 import classes from './Education.module.css';
+
+import Course from './Course';
+import { coursesData } from './course.data';
 
 export default function Education() {
   return (
     <>
       <article className={classes.education}>
+        {
+          coursesData.map((el, index) =>
+            <Course
+              name={el.courseName}
+              info={el.courseInfo}
+              link={el.courseLink}
+              key={index}
+            />
+          )}
+{/* 
+        <div className={classes.place}>
+          <Link to={'https://www.udemy.com/course/vuejs-2-the-complete-guide/'} target='_blank'>
+            <p>Vue</p>
+            <span>Udemy, 2023</span>
+          </Link>
+        </div>
+
         <div className={classes.place}>
           <Link to={'https://www.udemy.com/course/react-the-complete-guide-incl-redux/'} target='_blank'>
             <p>React</p>
@@ -39,7 +57,7 @@ export default function Education() {
             <p>Bachelor of science in electiral engeneering</p>
             <span>Sukhoi State Technical University Of Gomel, 2009-2014</span>
           </Link>
-        </div>
+        </div> */}
       </article>
     </>
   )

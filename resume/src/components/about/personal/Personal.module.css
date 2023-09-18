@@ -11,28 +11,12 @@
 }
 
 
-
 .info-wrapper {
   display: grid;
   align-content: center;
   gap: 5px 0px;
   grid-auto-rows: max-content;
 }
-
-.info-descr {
-  display: inline-block;
-  width: 90px;
-}
-
-.link {
-  transition: all .25s;
-}
-
-.link:hover {
-  color: var(--color-attract-main);
-}
-
-
 
 
 .img-wrapper {
@@ -68,7 +52,4 @@
     margin-bottom: 0;
   }
 
-  .info-descr {
-    width: 75px;
-  }
 }

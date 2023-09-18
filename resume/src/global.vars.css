@@ -1,6 +1,7 @@
 :root {
   --color-bg-main: #242424;
   --color-bg-header: #1b3761de;
+  --color-bg-skill: #ffd900ef;
 
   --color-font-main: #dbdbdb;
 
@@ -8,6 +9,7 @@
 
   --color-attract-main: #35e21e;
   --color-attract-second: #53add6;
+  --color-attract-skill: #000000;
 
 
   --color-fill-main: #35e21e;

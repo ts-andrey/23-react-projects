@@ -1,0 +1,28 @@
+.place {
+  padding: 0 0 5px 0;
+
+  border-bottom: 1px dashed #fff;
+
+  user-select: none;
+}
+
+.place span {
+  font-size: 90%;
+  font-style: italic;
+}
+
+.place p {
+  margin: 10px 0 0 0;
+
+  font-size: 110%;
+}
+
+.place a {
+  color: var(--color-link);
+
+  transition: all var(--transition-main);
+}
+
+.place a:hover {
+  color: var(--color-attract-main);
+}
