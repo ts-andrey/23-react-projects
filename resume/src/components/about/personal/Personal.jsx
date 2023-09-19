@@ -1,6 +1,6 @@
 import classes from './Personal.module.css';
 
-import Contact from './Contact';
+import DataItem from '../../../ui/dataItem/DataItem';
 import { contactsData } from './contacts.data';
 
 import photo from './../../../assets/photo.webp';
@@ -12,9 +12,10 @@ export default function Personal() {
         <div className={classes['info-wrapper']}>
           <h2 className={classes['personal-header']}>Contacts: </h2>
           {contactsData.map((el, index) =>
-            <Contact
-              type={el.contactType}
-              value={el.contactValue}
+            <DataItem
+              property={el.contactType}
+              description={el.contactValue}
+              type='contact'
               link={el.contactLink}
               key={index}
             />
