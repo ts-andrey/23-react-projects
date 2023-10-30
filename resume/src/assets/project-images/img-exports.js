@@ -11,6 +11,7 @@ import songBird from './song-bird.webp';
 import resume from './resume.webp';
 
 import coachFinder from './coach-finder.webp';
+import ITService from './it-service.webp';
 
 export const museumPreImg = museumPre;
 export const customVideoPlayerImg = customVideoPlayer;
@@ -25,3 +26,5 @@ export const songBirdImg = songBird;
 export const resumeImg = resume;
 
 export const coachFinderImg = coachFinder;
+
+export const ITServiceImg = ITService;

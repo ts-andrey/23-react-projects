@@ -11,7 +11,8 @@ import {
   songBirdImg,
   resumeImg,
 
-  coachFinderImg
+  coachFinderImg,
+  ITServiceImg
 } from '../../assets/project-images/img-exports';
 
 export const preProjects = [
@@ -93,6 +94,13 @@ export const vueProjects = [
     imgSrc: coachFinderImg,
     imgName: 'coach finder application image',
     linkTo: `https://ants-coach-finder.netlify.app`,
+  },
+  {
+    projectName: `IT Service`,
+    projectDescription: `This is a project for a specific repair shop, that provides different kind of services (repair different kind of appliances, software install/adjustment, PC customization, info about products in store, info about company/personal services and web development). So I build the site with a lot of sections for every kind of services the repair shop provides. I also build contact page and an admin section where site Administrartor can add new products to the store, delete sold products, and also add new items to other pages.`,
+    imgSrc: ITServiceImg,
+    imgName: 'IT Service application mage',
+    linkTo: `https://ants-it-service.netlify.app`,
   },
 
 ]
